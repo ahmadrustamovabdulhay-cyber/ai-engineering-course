@@ -53,13 +53,13 @@ open http://127.0.0.1:8000/docs to test POST /customers.
 
 
 ### Where do name and city come from?
-They are entered by the client/user and CustomerCreate chacks that data validity before letting the function recive it. 
+They are entered by the client/user and CustomerCreate checks that data validity before letting the function recieve it. 
 
 ### Which checks does Pydantic perform?
 Pydantic checks if both fields are given and if they are strings meeting the length requirements. If they do not fit, it responses with 422 error/status code
 
 ### Why does the server generate the ID?
-The server generates id to give each user a uniqe identifier to prevent future conflicts. Counter starts from 1 and each time the customer id is given to someone, the next_customer_id is increased by 1.
+The server generates id to give each user a unique identifier to prevent future conflicts. Counter starts from 1 and each time the customer id is given to someone, the next_customer_id is increased by 1.
 
 ### What happens when the server restarts?
 When the server restarts, it forgets all the customers stored in memory, but if the page is reloaded on the browser, the data does not get cleared.
