@@ -1,5 +1,5 @@
 
-from fastapi import FastAPI, HTTPException, Path, Query, Response 
+from fastapi import FastAPI, HTTPException, Path, Response 
 from pydantic import BaseModel, Field
 
 app = FastAPI(title="Task Tracker")
@@ -63,3 +63,8 @@ def delete_task(task_id: int = Path(gt = 0)):
     find_task(task_id)
     del tasks[task_id]
     return Response(status_code=204)
+
+def reset_store():
+    global next_task_id
+    tasks.clear()
+    next_task_id = 1
