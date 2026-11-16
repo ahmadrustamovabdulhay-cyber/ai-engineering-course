@@ -5,7 +5,7 @@ A FastAPI CRUD API for tasks, with in-memory storage.
 ## Install
 From the repository root:
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r student-work/khudoberdiev/week-01/task-tracker/requirements.txt
 ```
