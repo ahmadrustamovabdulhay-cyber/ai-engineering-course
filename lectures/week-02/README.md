@@ -1,17 +1,13 @@
-# Week 02: PostgreSQL and persistent state
+# Week 02 — PostgreSQL and persistent state
 
-store and query data, and distinguish validation from database behavior.
+How can a library app remember who has a book after the app restarts? We’ll model books, members, and loans, ask questions using SQL, and put one familiar query behind a FastAPI endpoint.
 
-[Theory notes](notes.md) · [Lecture code](code/)
+| Material | What you’ll do |
+|---|---|
+| [Session 03 — Create, read, and change tables](session-03.md) | Learn SQL syntax and write queries and changes against three related tables. |
+| [Session 04 — Join, count, and roll back](session-04.md) | Combine rows, count loans for each book, and see how a transaction handles changes. |
+| [Homework 04 — Run a SQL query through FastAPI](assignment04.md) | Map an existing PostgreSQL table with SQLAlchemy and implement an endpoint. |
+| [SQL reference](notes.md) | Review the syntax and common mistakes. |
+| [Setup, seed data, and starter](code/README.md) | Set up the classroom data in postgres.new and connect the homework app to hosted PostgreSQL. |
 
-## Planned sessions
-
-### Session 3
-
-tables, primary keys, insert/select/update/delete, parameterized SQL, and a transaction. Lab: save a note using the supplied database-only Compose service.
-
-### Session 4
-
-connect the API to Postgres; add update/delete and a repeatable schema/seed command. Lab: restart the app and verify the note survives.
-
-These are lesson plans. Finished notes and runnable lecture examples will be added as teaching progresses.
+Both live lessons use [postgres.new](https://postgres.new/) in your browser. Bring up a fresh database for Session 03. For Session 04, reuse your clean library data or load the [seed script](code/library.sql) into a fresh database. The homework starter uses the same schema on a hosted PostgreSQL instance.
