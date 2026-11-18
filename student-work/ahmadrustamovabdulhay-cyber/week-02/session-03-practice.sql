@@ -65,3 +65,9 @@ WHERE id = 102;
 SELECT *
 FROM registrations
 WHERE id = 101;
+
+-- Rejected foreign-key test:
+-- INSERT INTO registrations (id, registered_on, cancelled_on, event_id, student_id)
+-- VALUES (199, '2026-11-22', NULL, 99, 11);
+-- Error: Key (event_id)=(99) is not present in table "events".
+-- Explanation: student 11 exists, but event 99 does not. The event_id foreign key rejected the insert.
