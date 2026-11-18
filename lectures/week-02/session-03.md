@@ -199,4 +199,8 @@ DELETE FROM members WHERE id = 14;
 
 Find loan `102`. Name its primary key and its two foreign keys. Write a query to find the borrower’s name and explain what PostgreSQL does when a new loan references a missing book.
 
+## Practice before Session 04
+
+Follow the [local PostgreSQL practice sheet](session-03-practice.md). Use what you learned from the library example to build a campus event registration database and practice adding, finding, updating, and deleting rows.
+
 For another dataset, try [SQLBolt’s first SELECT exercise](https://sqlbolt.com/lesson/select_queries_introduction).
